@@ -1,0 +1,257 @@
+/* css reset*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent
+}
+body {
+  line-height: 1
+}
+:focus {
+  outline: 1
+}
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block
+}
+nav ul {
+  list-style: none
+}
+blockquote, q {
+  quotes: none
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none
+}
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: 700
+}
+del {
+  text-decoration: line-through
+}
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0
+}
+input, select {
+  vertical-align: middle
+}
+
+/* main */
+
+body {
+  background: #f0f0f0;
+}
+
+/* 水平垂直居中-公共类 */
+
+.c-wrap {
+  display: table;
+  *writing-mode: tb-rl;
+}
+.c-inner {
+  display: table-cell;
+  vertical-align: middle;
+  *width: 100%;
+  *margin: auto 0;
+  *writing-mode: lr-tb;
+}
+.wrap {
+  width: 1000px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-width: 0 1px 1px 1px;
+  box-shadow: 0 0 3px #ccc;
+  background: #ffffff;
+}
+.article {
+  width: 900px;
+  margin: 0 auto;
+  font-family: 'Microsoft Yahei';
+  color: #333;
+}
+.article h1 {
+  padding-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 24px;
+}
+.article h4 {
+  margin: 10px 0;
+}
+.article p, .article pre {
+  margin: 12px 0;
+  text-indent: 2em;
+  line-height: 24px;
+  color: #444;
+}
+.article pre {
+  background: #eaeaea;
+  padding: 3px 0;
+  font-size: 12px;
+  color: #222;
+}
+.fl {
+  float: left;
+  *display: inline;
+}
+.img-area {
+  text-align: center;
+  ;
+}
+.img-area img {
+  border: 1px solid #000
+}
+.lab-area {
+  padding: 15px 0;
+}
+.test01 {
+  width: 400px;
+  height: 160px;
+  margin: 0 auto;
+  line-height: 80px;
+  font-size: 16px;
+  text-align: center;
+  background: #81C0FF;
+  color: #fff;
+}
+.css3-btn {
+  background: #FF9397;
+  padding: 5px 8px;
+  border-radius: 10%;
+  color: #fff;
+  cursor: pointer;
+}
+#container {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+  padding-bottom: 10px;
+}
+#container ul {
+  width: 101%;
+}
+#container ul li {
+  position: relative;
+  float: left;
+  width: 116px;
+  height: 79px;
+  overflow: hidden;
+  margin: 10px 0 0 10px;
+  background: #65c46b;
+}
+.mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  font-size: 18px;
+  line-height: 79px;
+  color: #fff;
+  text-align: center;
+  display: none;
+}
+.mask {
+  -webkit-transition: -webkit-transform 0.23s ease-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -moz-transition: -moz-transform 0.23s ease-out;
+  -moz-transform: translate3d(0, 0, 0);
+  -moz-backface-visibility: hidden;
+  -o-transition: -o-transform 0.23s ease-out;
+  -o-transform: translate3d(0, 0, 0);
+  -o-backface-visibility: hidden;
+  -ms-transition: -ms-transform 0.23s ease-out;
+  -ms-transform: translate3d(0, 0, 0);
+  -ms-backface-visibility: hidden;
+  transition: transform 0.23s ease-out;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+@media \0screen\, screen\9 {
+  .mask {
+    filter: progid: DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#7f000000', endColorstr='#7f000000');
+  }
+}
+.top {
+  -webkit-transform: rotate(-90deg);
+  -webkit-transform-origin: left top;
+  -moz-transform: rotate(-90deg);
+  -moz-transform-origin: left top;
+  -o-transform: rotate(-90deg);
+  -o-transform-origin: left top;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+}
+.right {
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin: right bottom;
+  -moz-transform: rotate(90deg);
+  -moz-transform-origin: right bottom;
+  -o-transform: rotate(90deg);
+  -o-transform-origin: right bottom;
+  transform: rotate(90deg);
+  transform-origin: right bottom;
+}
+.bottom {
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin: left bottom;
+  -moz-transform: rotate(90deg);
+  -moz-transform-origin: left bottom;
+  -o-transform: rotate(90deg);
+  -o-transform-origin: left bottom;
+  transform: rotate(90deg);
+  transform-origin: left bottom;
+}
+.left {
+  -webkit-transform: rotate(-90deg);
+  -webkit-transform-origin: left bottom;
+  -moz-transform: rotate(-90deg);
+  -moz-transform-origin: left bottom;
+  -o-transform: rotate(-90deg);
+  -o-transform-origin: left bottom;
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+}
+.hover .mask {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}

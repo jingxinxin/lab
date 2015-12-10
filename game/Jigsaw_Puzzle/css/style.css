@@ -1,0 +1,226 @@
+  body, div, span, h1, h2, h3, h4, h5, h6, hr, p, blockquote, strong, var, b, u, i, center, dl, dt, dd, ul, ol, li, prea, address, fieldset, form, fieldset, label, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    -webkit-text-size-adjust: none;
+  }
+  body {
+    color: #444;
+    font-size: 100%;
+    font-family: Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+  }
+  ul, ol {
+    list-style-type: none;
+  }
+  select, input, img, select {
+    vertical-align: middle;
+  }
+  button, input, select, textarea {
+    font-size: 100%;
+  }
+  li {
+    list-style-type: none;
+    vertical-align: top;
+  }
+  img {
+    vertical-align: middle;
+    border: 0px;
+    margin: 0;
+    padding: 0;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+  }
+  address, cite, dfn, em, var {
+    font-style: normal;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  a {
+    border: 0;
+  }
+  del {
+    text-decoration: line-through;
+  }
+  em {
+    font-style: normal;
+  }
+  legend {
+    color: #222;
+  }
+  fieldset {
+    border: 0;
+  }
+  a {
+    color: #666;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #bf1a21;
+    text-decoration: none;
+  }
+  .clearfloat:before, .clearfloat:after {
+    content: "";
+    display: table;
+  }
+  .clearfloat:after {
+    clear: both;
+  }
+  /* For IE 6/7 (trigger hasLayout) */
+
+  .clearfloat {
+    zoom: 1;
+  }
+  /* main */
+
+  body {
+    background: #eaeaea;
+  }
+  #puzzle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -250px 0 0 -250px;
+    min-width: 500px;
+    min-height: 500px;
+    _width: auto;
+    _width: 500px;
+    _height: auto;
+    _height: 500px;
+    border: 5px solid #666;
+    background: #fff;
+    -webkit-user-select: none;
+  }
+  .item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #aaa;
+    overflow: hidden;
+  }
+  .item.selected {
+    opacity: 1;
+  }
+  .item.selected .mask {
+    background: rgba(155, 202, 121, 0.6);
+    border-radius: 50%;
+  }
+  @media \0screen\, screen\9 {
+    .item.selected .mask {
+      filter: progid: DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#999bca79', endColorstr='#999bca79');
+    }
+  }
+  .item img {
+    width: 500px;
+  }
+  .mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(155, 202, 121, 0);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  .levelList {
+    width: 300px;
+    height: 360px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -180px 0 0 -150px;
+  }
+  .levelList li {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 40px;
+    background: #6699cc;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    ;
+    border-radius: 10px;
+  }
+  li.opt {
+    cursor: pointer
+  }
+  li.opt:hover {
+    background: #9bca79;
+  }
+  .span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    font-size: 30px;
+    left: 50%;
+    margin-left: -20px;
+    bottom: -20px;
+    color: #6699cc;
+  }
+  #form {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    margin-top: -300px;
+    text-align: center;
+  }
+  #file, #cue, #test {
+    width: 242px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    text-indent: 5px;
+    border: 1px solid #6699cc;
+    color: #9bca79;
+  }
+  #btn,#btn2, #try {
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    text-align: center;
+    background: #6699cc;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+  }
+  #cue {
+    position: absolute;
+    top: 0px;
+    left: 46%;
+    margin-left: -153px;
+    text-align: left;
+    border: 0;
+  }
+  #noZuoNoDie {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    margin-top: -250px;
+    width: 360px;
+  }
+  .tips {
+    color: #999;
+    margin-top: 10px;
+    line-height: 28px;
+  }
+  .tips strong {
+    color: #f00;
+  }
+  #copyRight {
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+  }

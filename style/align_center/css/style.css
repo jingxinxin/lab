@@ -1,0 +1,161 @@
+/* css reset*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent
+}
+body {
+  line-height: 1
+}
+:focus {
+  outline: 1
+}
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block
+}
+nav ul {
+  list-style: none
+}
+blockquote, q {
+  quotes: none
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none
+}
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: 700
+}
+del {
+  text-decoration: line-through
+}
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0
+}
+input, select {
+  vertical-align: middle
+}
+
+/* main */
+
+body {
+  background: #f0f0f0;
+}
+
+/* 水平垂直居中-公共类 */
+
+.c-wrap {
+  display: table;
+  *writing-mode: tb-rl;
+}
+.c-inner {
+  display: table-cell;
+  vertical-align: middle;
+  *width: 100%;
+  *margin: auto 0;
+  *writing-mode: lr-tb;
+}
+.wrap {
+  width: 1000px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-width: 0 1px 1px 1px;
+  box-shadow: 0 0 3px #ccc;
+  background: #ffffff;
+}
+.article {
+  width: 900px;
+  margin: 0 auto;
+  font-family: 'Microsoft Yahei';
+  color: #333;
+}
+.article h1 {
+  padding-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+.article h4 {
+  margin: 10px 0;
+}
+.article p, .article pre {
+  margin: 12px 0;
+  text-indent: 2em;
+  line-height: 24px;
+  color: #444;
+}
+.fl {
+  float: left;
+  *display: inline;
+}
+.user-case-list {
+  list-style: circle;
+}
+.user-case-list .c-wrap {
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid #999;
+  box-shadow: inset 0 0 300px #666;
+  -webkit-transform: translate(0, 0, 0);
+  -moz-transform: translate(0, 0, 0);
+  transform: translate(0, 0, 0);
+}
+.exam-img-ctn, .exam-block {
+  cursor: move;
+}
+p.exam-text {
+  width: 60%;
+  margin: 0 auto;
+}
+.exam-block {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background: #345cbb;
+}
+.exam-inline-block .exam-block {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin: 3px;
+}
+.test {
+  background: url(http://ww3.sinaimg.cn/bmiddle/c0788b86gw1ejln9bepwzj20go0fy3zr.jpg) 50% no-repeat;
+}

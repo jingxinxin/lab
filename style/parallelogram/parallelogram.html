@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>用CSS实现平行四边形导航栏的一种办法</title>
+	<link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="article">
+			<h1>用CSS实现平行四边形导航栏的一种办法</h1>
+			<h4>时间：2014/09/15</h4>
+			<h4>正文：</h4>
+			<p>CSS盒模型的几何原型是矩形，它是特殊的平行四边形，四个夹角都是90°。而在网页设计中，有时导航栏被设计为夹角不等于90°的平行四边形，还有 hover 时变色的需求。颇令人头疼。</p>
+			<hr />
+			<p>经过摸索，有一种简单经济的方法，可以适用于纯色的平行四边形导航栏设计。需要一张雪碧图（如下图），和一个在语义化结构中属于「多余」的 span 标签。如果无意支持低版本浏览器，这个 span 标签可由伪元素替代。</p>
+			<div class="img-area">
+				<img src="images/nav-bg.jpg" alt="">
+			</div>
+			<p>HTML结构如下：</p>
+			<div class="img-area">
+				<img src="images/html01.jpg" alt="">
+			</div>
+			<p>实现思路是：z-index 属性和 margin-right 的负值相结合：</p>
+			<pre>1、所有 a 标签浮动，设置宽高，设置 position 为 relative（z-index 作用在非 static 定位的元素上），设置 z-index 为 1。</pre>
+			<pre>2、设置负的 margin-right 为雪碧图的宽，即让相继的 a 标签的前端覆盖前一个 a 标签的末端。</pre>
+			<pre>3、当 a 标签处于 hover 状态，设置背景色，设置前景色，设置 z-index 为 2，让 hover 状态的 a 标签的末端覆盖相继的 a 标签的前端。</pre>
+			<pre>4、由于最末尾的 a 标签没有相继的兄弟元素，所以要设置 last 类名，做特殊处理。</pre>
+			<pre>5、span 元素为 a 标签的子元素，设置左浮动，设置负的 margin-right 为为雪碧图的宽，弥补 a 标签文字受浮动元素的影响。</pre>
+			<pre>6、在 span 父元素处于 hover 状态下， span 改变自己的背景定位 background-position。</pre>
+			<p>CSS结构如下：</p>
+			<div class="img-area">
+				<img src="images/css01.jpg" alt="">
+			</div>
+			<p>实现的效果如下：</p>
+			<div class="lab-area mt20">
+				<div class="nav">
+					<a href="javascript:void(0)">
+						<span></span>第一个</a>
+					<a href="javascript:void(0)">
+						<span></span>第二个</a>
+					<a href="javascript:void(0)">
+						<span></span>第三个</a>
+					<a href="javascript:void(0)">
+						<span></span>第四个</a>
+					<a class="last" href="javascript:void(0)">
+						<span></span>第五个</a>
+				</div>
+			</div>
+			<p>更改雪碧图的颜色为 #bf1a21 ，很容易就实现别的颜色，可编辑性强。</p>
+			<div class="lab-area">
+				<div class="color1 nav mt20">
+					<a href="javascript:void(0)">
+						<span></span>第一个</a>
+					<a href="javascript:void(0)">
+						<span></span>第二个</a>
+					<a href="javascript:void(0)">
+						<span></span>第三个</a>
+					<a href="javascript:void(0)">
+						<span></span>第四个</a>
+					<a class="last" href="javascript:void(0)">
+						<span></span>第五个</a>
+				</div>
+			</div>
+			<p>这个实现方式，兼容 ie6 +，无须 js，在简单的业务需求场景下是不错的选择。</p>
+		</div>
+	</div>
+</body>
+
+</html>
