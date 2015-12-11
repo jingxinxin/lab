@@ -1,0 +1,146 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello,2016</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      background-color: #0066ff;
+    }
+
+    html,
+    body {
+      margin: 0;
+      border: 0 none;
+      padding: 0;
+    }
+
+    body {
+      font-size: 1em;
+      font-family: "Microsoft Yahei", "黑体", monospace;
+    }
+
+    .title,
+    .content p {
+      display: none;
+    }
+  </style>
+
+  <script src="http://lib.sinaapp.com/js/jquery/1.10.2/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="http://sandbox.runjs.cn/uploads/rs/446/q9fsxu3w/jquery-timing.min.js"></script>
+  <script src="http://sandbox.runjs.cn/uploads/rs/446/q9fsxu3w/idangerous.swiper.m.js"></script>
+  <link rel="stylesheet" href="http://sandbox.runjs.cn/uploads/rs/446/q9fsxu3w/idangerous.swiper.css">
+  <style>
+    .swiper-container,
+    .swiper-slide {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script type="text/javascript">
+    $(function() {
+      var mySwiper = $('.swiper-container').swiper({
+
+        mode: 'vertical',
+        loop: true,
+        mousewheelControl: true,
+        keyboardControl: true,
+        onSlideChangeStart: function() {
+
+
+        },
+        onSlideChangeEnd: function() {
+          $('.content p').each($).show(1000).wait(1600);
+        },
+        onSwiperCreated: function() {
+          $('.title').wait(500).slideDown().delay(500).animate({
+            fontSize: "250%",
+            color: "red",
+            display: "block"
+          }, 3000, "swing");
+          $('.content p').each($).show(1000).wait(1600);
+        }
+      });
+    })
+  </script>
+
+</head>
+
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!--First Slide-->
+      <div class="swiper-slide" style="background-color:#000099;">
+        <div class="title">Say Good Bye to 2015</div>
+        <div class="content">
+          <p>
+            嗨~ 我是JX,Jacks
+          </p>
+          <p>
+            2015就要走了。是回忆？是幸福？或是，遗憾？
+          </p>
+          <p>
+            随它去吧，过去的已成往事。未来还在前方。
+          </p>
+          <p>
+            2016呢？谁将走入我的生命，又将和谁匆匆告别？
+          </p>
+          <p>
+            小伙伴们，我只是希望，大家，每个人，都，过得好。
+          </p>
+
+        </div>
+      </div>
+
+      <!--Second Slide-->
+      <div class="swiper-slide" style="background-color:gray;">
+        <div class="title">Merry Christmas</div>
+        <p>
+          运用了jquery timing插件，实现定时效果
+
+        </p>
+        <p>
+          swiper插件,实现翻页效果
+        </p>
+      </div>
+
+      <!--Third Slide-->
+      <div class="swiper-slide" style="background-color:red;">
+        <div class="title">Merry Christmas</div>
+      </div>
+      <div class="swiper-slide" style="background-color:black;">
+        <div class="title">观望未来</div>
+        <div class="content">
+          <p>
+             恭喜你发现！！彩蛋！！！！！！
+          </p>
+          <p>
+            几年后如果需要从互联网到物联网转型
+          </p>
+          <p>
+            也许可以node+chromium配合webkit写桌面应用再+物联网，就可以实现web控制家电了
+          </p>
+          <p>
+            以后做一个物联网控制平台网站，卖相应的物联网设备，这个应该是360和小米正在探索的领域
+          </p>
+          <p>
+            web3.0时代
+          </p>
+          <p>
+            再延伸到车载系统，未来真是一偏光明和美好
+          </p>
+        </div>
+      </div>
+      <!--Etc..-->
+    </div>
+  </div>
+
+
+</body>
+
+</html>

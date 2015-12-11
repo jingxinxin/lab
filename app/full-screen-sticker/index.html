@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>漫天表情飘</title>
+  <meta content="无聊，写个无聊的东西都自己乐乐。部分代码是从360里面抄过来的。" name="keywords" />
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body class="Snow">
+  <div id="main"></div>
+  <!--引入JQ库文件-->
+  <script type="text/javascript" src="../../vendors/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+if($.browser.msie && $.browser.version <= 8){
+alert('亲，您的浏览器太out了，赶紧升级到IE9吧或者用谷歌浏览器或者火狐浏览器打开看吧!');
+}
+
+var width=$(window).width();
+var height=$(window).height();
+var Snow = function(e, t, n, r, i, s) {
+  var o = this;
+  o.el = e, o.x1 = t, o.y1 = n, o.x2 = r, o.y2 = i, o.speed = s, o.space = Math.floor(Math.random() * 40 + 40), o.init()
+};
+Snow.prototype = {
+init: function() {
+  var e = this;
+  e.el.css({
+    left: e.x1,
+    top: e.y1
+  }), e.el.fadeIn("fast"), e.move()
+},
+move: function() {
+  var e = this;
+  $.browser.msie && $.browser.version <= 6 ? e.el.animate({
+    left: e.x2 + "px",
+    top: e.y2 + "px"
+  }, e.speed, "linear", function() {
+    e.init()
+  }) : e.el.animate({
+    left: e.x2 + "px",
+    top: e.y2 - e.space + "px"
+  }, e.speed, "linear", function() {
+    e.el.fadeOut("slow", function() {
+      e.init()
+    })
+  })
+}
+};
+var SnowFly = {
+init: function() {
+  for (var e = 0; e < 20; e++) {
+    var t = Math.floor(Math.random() * 21 + 1),
+      n = Math.floor(Math.random() * 10000 + 10000),
+      r = Math.floor(Math.random()*(width-100)+100),
+      i = Math.floor(Math.random() * 155 - 155),
+      s = r + Math.floor(Math.random() * 100 - Math.random() * 150);
+    y2 = height, el = $("<div/>").addClass("c" + t).appendTo($("#main")).css({
+      left: r,
+      top: i
+    }), new Snow(el, r, i, s, y2, n)
+  }
+}
+};
+$.browser.msie && $.browser.version <= 6 || SnowFly.init()
+
+</script>
+
+</body>
+
+</html>

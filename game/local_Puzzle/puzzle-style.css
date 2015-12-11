@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+a img {border:none;}
+a {text-decoration:none;}
+em,var {font-style:normal;}
+ul,ol {padding:0;list-style-type:none;}
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,form,p {margin:0;}
+body,td,th,h1,h2,h3,h4,h5,h6 {font-size:12px;font-family:Arial,Helvetica,sans-serif;}
+input,textarea,a,button {outline:none;}
+input::-moz-focus-inner {border:0;}
+body {background:#fff;line-height:1.125;}
+a:hover {text-decoration:underline;}
+
+.clearfix:after{display:table;clear:both;content:"";}
+.clearfix{zoom:1;}
+
+/*
+* puzzle-style.css
+* 拼图游戏的样式
+* by liangzhu
+* date 2013-05-08
+*/
+
+/*初始宽度*/
+.puzzle_game{width:600px;margin:0 auto;}
+
+/*拼图设置*/
+.puzzle_game .config{padding:20px 0;color:#333;font-size:12px;text-align:center;}
+/*拼图尺寸*/
+.puzzle_game .size_set_area{margin-bottom:20px;}
+.puzzle_game .config_label{margin-right:20px;}
+.puzzle_game .size_input{width:20px;padding:0 5px;font-size:14px;vertical-align:middle;}
+.puzzle_game .size_set_note{padding-top:10px;color:#666;}
+/*图片上传*/
+.puzzle_game .upload_btn{display:inline-block;position:relative;width:72px;height:30px;border-radius:15px;background:#977f6e;overflow:hidden;color:#fff;line-height:30px;}
+.puzzle_game .upload_btn:hover{background:#ef8484;text-decoration:none;}
+.puzzle_game .upload_file{position:absolute;height:100%;margin:0;padding:0;font-size:120px;font-family:Arial;cursor: pointer;opacity:0;filter:alpha(opacity=0);right:0;top:0;}
+.puzzle_game .upload_note{padding-top:10px;color:#666;}
+.puzzle_game .upload_progress{width:100px;height:6px;margin:12px auto;background:#7dc4f6;}
+.puzzle_game .current_progress{height:100%;background:#1f8dd9;}
+/*设置不符或图片不合适的提示*/
+.puzzle_game .note_warn{color:#de4242;}
+
+.puzzle_game .game_core{padding:20px;border:1px dotted #ef8484;}
+.puzzle_game .game_info{padding:20px 10px;font-size:14px;text-align:right;}
+.puzzle_game .step_count_note{color:#333;}
+.puzzle_game .step_count{color:#eb5757;}
