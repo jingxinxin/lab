@@ -4,13 +4,16 @@
 <head>
   <meta charset="utf-8">
   <title>lab entry</title>
+  <link rel="stylesheet" href="index/css/index.css" media="screen" title="no title" charset="utf-8">
 </head>
 
 <body>
   <div>
     <ul name='navigation'>
       <h1>app</h1>
-      <li><a href="app/love-tree/index.html">Love Tree (浪漫表白树)</a></li>
+      <li><a href="app/love-tree/index.html">Love Tree (浪漫表白树)</a>
+        <span id='pv_love-tree'></span>
+      </li>
       <li><a href="app/todos-flux/index.html">Todos (计划本)</a></li>
       <li><a href="app/draggable-list/index.html">Draggable List (可拖动的列表)</a></li>
       <li><a href="app/draggable-balls/index.html">Draggable Balls (可拖动重新排列的球)</a></li>
@@ -39,6 +42,23 @@
       <li><a href="pets/spider/index.html">spider-canvas (小蜘蛛)</a></li>
     </ul>
   </div>
+  <div>
+    <ul>
+      <li>PS:</li>
+      <li>LPV=Local page views</li>
+    </ul>
+  </div>
+  <div id='pageView'></div>
 </body>
+<script src="index\utility\component\Record_PV_by_LocalStorage.js" charset="utf-8"></script>
+<script>
+  record_PV_by_LocalStorage.entry('index');
+  var HtmlPageView = record_PV_by_LocalStorage.HtmlPageView('index');
+  document.getElementById('pageView').appendChild(HtmlPageView);
+
+  var pageView = record_PV_by_LocalStorage.getPageView('love-tree');
+  if (!isNaN(pageView))
+    document.getElementById('pv_love-tree').innerHTML = "(LPV " + pageView + ")";
+</script>
 
 </html>
