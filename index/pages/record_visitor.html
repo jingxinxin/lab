@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>visitor information</title>
+  <style type="text/css">
+    #divframe {
+      border: 1px solid #999;
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    .loadTitle {
+      background: #CCC;
+      height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="divframe">
+    <div class="loadTitle">
+      <input type="button" value="获取数据" id="btn" />
+    </div>
+    <div id="jsonTip">
+    </div>
+  </div>
+</body>
+<script src="../../vendors/jquery-1.7.2.min.js" charset="utf-8"></script>
+<script>
+  $(function() {
+    $("#btn").click(function() {
+      $.getJSON("../../json/visitor_information.html", function(data) {
+        var $jsontip = $("#jsonTip");
+        var strHtml = "123"; //存储数据的变量
+        $jsontip.empty(); //清空内容
+        $.each(data, function(infoIndex, info) {
+          strHtml += "姓名：" + info["name"] + "<br>";
+          strHtml += "性别：" + info["sex"] + "<br>";
+          strHtml += "邮箱：" + info["email"] + "<br>";
+          strHtml += "<hr>"
+        })
+        $jsontip.html(strHtml); //显示处理后的数据
+      })
+    })
+
+  })
+</script>
+
+</html>

@@ -139,7 +139,8 @@ var index = (function() {
     }
     var together = new Date();
     if (timeIsRight) {
-      together.setFullYear(timeArray[0], timeArray[1], timeArray[2]); //时间年月日
+      debugger;
+      together.setFullYear(timeArray[0], timeArray[1]-1, timeArray[2]); //时间年月日
       together.setHours(13); //小时
       together.setMinutes(14); //分钟
       together.setSeconds(2); //秒前一位
