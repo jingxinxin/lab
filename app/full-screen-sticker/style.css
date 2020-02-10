@@ -1,172 +1,204 @@
 * {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
+
 #main {
-  width: 100%;
-  position: relative;
-  min-height: 100%;
-  _height: 100%
+    width: 100%;
+    position: relative;
+    min-height: 100%;
+    _height: 100%
 }
+
 #main div {
-  background: url(http://sandbox.runjs.cn/uploads/rs/290/zgpr2hqt/all.png) no-repeat;
-  position: absolute;
-  overflow: hidden;
-  width: 21px;
-  height: 21px;
-  -webkit-animation: rotate 2s linear infinite;
-  -moz-animation: rotate 2s linear infinite;
-  -o-animation: rotate 2s linear infinite;
-  animation: rotate 2s linear infinite
+    background: url(http://bpic.588ku.com/original_pic/18/06/28/76edee0c02829372b865d69ce6d03103.jpg) no-repeat;
+    position: absolute;
+    overflow: hidden;
+    width: 21px;
+    height: 21px;
+    -webkit-animation: rotate 2s linear infinite;
+    -moz-animation: rotate 2s linear infinite;
+    -o-animation: rotate 2s linear infinite;
+    animation: rotate 2s linear infinite
 }
+
 #main .c1 {
-  background-position: 0 0;
+    background-position: 0 0;
 }
+
 #main .c2 {
-  background-position: -21px 0;
+    background-position: -21px 0;
 }
+
 #main .c3 {
-  background-position: -42px 0;
+    background-position: -42px 0;
 }
+
 #main .c4 {
-  background-position: -63px 0;
+    background-position: -63px 0;
 }
+
 #main .c5 {
-  background-position: -84px 0;
+    background-position: -84px 0;
 }
+
 #main .c6 {
-  background-position: -105px 0;
+    background-position: -105px 0;
 }
+
 #main .c7 {
-  background-position: -126px 0;
+    background-position: -126px 0;
 }
+
 #main .c8 {
-  background-position: -147px 0;
+    background-position: -147px 0;
 }
+
 #main .c9 {
-  background-position: -168px 0;
+    background-position: -168px 0;
 }
+
 #main .c10 {
-  background-position: -189px 0;
+    background-position: -189px 0;
 }
+
 #main .c11 {
-  background-position: -210px 0;
+    background-position: -210px 0;
 }
+
 #main .c12 {
-  background-position: 0px -21px;
+    background-position: 0px -21px;
 }
+
 #main .c13 {
-  background-position: -21px -21px;
+    background-position: -21px -21px;
 }
+
 #main .c14 {
-  width: 22px;
-  height: 22px;
-  background-position: -42px -21px;
+    width: 22px;
+    height: 22px;
+    background-position: -42px -21px;
 }
+
 #main .c15 {
-  width: 22px;
-  height: 22px;
-  background-position: -64px -21px;
+    width: 22px;
+    height: 22px;
+    background-position: -64px -21px;
 }
+
 #main .c16 {
-  background-position: -86px -21px;
+    background-position: -86px -21px;
 }
+
 #main .c17 {
-  background-position: -107px -21px;
+    background-position: -107px -21px;
 }
+
 #main .c18 {
-  width: 11px;
-  height: 21px;
-  background-position: -128px -21px;
+    width: 11px;
+    height: 21px;
+    background-position: -128px -21px;
 }
+
 #main .c19 {
-  width: 22px;
-  height: 13px;
-  background-position: -139px -21px;
+    width: 22px;
+    height: 13px;
+    background-position: -139px -21px;
 }
+
 #main .c20 {
-  background-position: -162px -21px;
+    background-position: -162px -21px;
 }
+
 #main .c21 {
-  background-position: -183px -21px;
+    background-position: -183px -21px;
 }
+
 @-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg)
-  }
-  to {
-    -webkit-transform: rotate(360deg)
-  }
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(360deg)
+    }
 }
+
 @-moz-keyframes rotate {
-  from {
-    -moz-transform: rotate(0deg)
-  }
-  to {
-    -moz-transform: rotate(360deg)
-  }
+    from {
+        -moz-transform: rotate(0deg)
+    }
+    to {
+        -moz-transform: rotate(360deg)
+    }
 }
+
 @-o-keyframes rotate {
-  from {
-    -o-transform: rotate(0deg)
-  }
-  to {
-    -o-transform: rotate(360deg)
-  }
+    from {
+        -o-transform: rotate(0deg)
+    }
+    to {
+        -o-transform: rotate(360deg)
+    }
 }
+
 @keyframes rotate {
-  from {
-    transform: rotate(0deg)
-  }
-  to {
-    transform: rotate(360deg)
-  }
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
 }
+
 @-webkit-keyframes rotate2 {
-  0% {
-    -webkit-transform: rotate(-6deg)
-  }
-  50% {
-    -webkit-transform: rotate(10deg)
-  }
-  100% {
-    -webkit-transform: rotate(-6deg)
-  }
+    0% {
+        -webkit-transform: rotate(-6deg)
+    }
+    50% {
+        -webkit-transform: rotate(10deg)
+    }
+    100% {
+        -webkit-transform: rotate(-6deg)
+    }
 }
+
 @-moz-keyframes rotate2 {
-  0% {
-    -moz-transform: rotate(-6deg)
-  }
-  50% {
-    -moz-transform: rotate(10deg)
-  }
-  100% {
-    -moz-transform: rotate(-6deg)
-  }
+    0% {
+        -moz-transform: rotate(-6deg)
+    }
+    50% {
+        -moz-transform: rotate(10deg)
+    }
+    100% {
+        -moz-transform: rotate(-6deg)
+    }
 }
+
 @-o-keyframes rotate2 {
-  0% {
-    -o-transform: rotate(-6deg)
-  }
-  50% {
-    -o-transform: rotate(10deg)
-  }
-  100% {
-    -o-transform: rotate(-6deg)
-  }
+    0% {
+        -o-transform: rotate(-6deg)
+    }
+    50% {
+        -o-transform: rotate(10deg)
+    }
+    100% {
+        -o-transform: rotate(-6deg)
+    }
 }
+
 @keyframes rotate2 {
-  0% {
-    transform: rotate(-6deg)
-  }
-  50% {
-    transform: rotate(10deg)
-  }
-  100% {
-    transform: rotate(6deg)
-  }
+    0% {
+        transform: rotate(-6deg)
+    }
+    50% {
+        transform: rotate(10deg)
+    }
+    100% {
+        transform: rotate(6deg)
+    }
 }
+
 body {
-  background: url(mylibrary.jpg) center top no-repeat;
+    background: url(mylibrary.jpg) center top no-repeat;
 }
