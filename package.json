@@ -1,0 +1,20 @@
+{
+  "name": "lab",
+  "version": "1.0.0",
+  "description": "> Lab for the collection of web page awesome effect.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "gp origin HEAD:gh-pages --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jingxinxin/lab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jingxinxin/lab/issues"
+  },
+  "homepage": "https://github.com/jingxinxin/lab#readme"
+}
