@@ -1,65 +1,75 @@
 <!DOCTYPE HTML>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>The Matrix</title>
-<style type="text/css">
-/*basic reset*/
-* {margin: 0; padding: 0;}
-/*adding a black bg to the body to make things clearer*/
-body {background: black;}
-canvas {display: block;}
-</style>
+  <meta charset="utf-8" />
+  <title>The Matrix</title>
+  <style type="text/css">
+    /*basic reset*/
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /*adding a black bg to the body to make things clearer*/
+    body {
+      background: black;
+    }
+
+    canvas {
+      display: block;
+    }
+  </style>
 </head>
 <body>
 <canvas id="c"></canvas>
 <script type="text/javascript">
-var c = document.getElementById("c");
-var ctx = c.getContext("2d");
+  var c   = document.getElementById('c')
+  var ctx = c.getContext('2d')
 
-c.height = window.innerHeight;
-c.width = window.innerWidth;
+  c.height = window.innerHeight
+  c.width  = window.innerWidth
 
-var sum=Math.floor(Math.random()*6);
-var chinese = "所谓命运，就是指身不由己，我不喜欢这种概念。  ";
-var english = "10 abcdefghijklmnopqrstuvwxyz~！@#￥%……&*（）——+I know why you're here";
-var other = "あアいイうウえおかきキく クけケこコさサしシすスせセそソたタちチつツてテとトなナにニぬヌねネのノはハひヒふフへヘほホまマみミむムめメもモやヤゆユよヨらラりリるルれレろロわワをヲんンがガぎギぐグげゲごゴざザじジzi ずジ ぜゼぞゾだダぢヂづヅでデ どドばバびビぶブべベぼボぱパぴピぷプ ぺペぽポ ";
-var other1 ="輸入簡體字,點下面繁體字按鈕 進行在線轉換 個克裏斯蒂娜考慮公司帶給妳快樂給妳快 樂都是給妳看了那個快樂";
-var other2 ="10 abcdef,點下面繁體字 I know why you're here按鈕進行アいイうウえおかきキく斯蒂娜考慮公 司帶給首付 款你ghijklmnopqrs看快樂都是給妳看了那個快樂 너혼자깨어";
-var other3 ="니가있는데이런느낌없이바로너혼자깨어있다,안먹어아니면꿈을꾸고  ";
+  var sum     = Math.floor(Math.random() * 6)
+  var chinese = '所谓命运，就是指身不由己，我不喜欢这种概念。  '
+  var english = '10 abcdefghijklmnopqrstuvwxyz~！@#￥%……&*（）——+I know why you\'re here'
+  var other   = 'あアいイうウえおかきキく クけケこコさサしシすスせセそソたタちチつツてテとトなナにニぬヌねネのノはハひヒふフへヘほホまマみミむムめメもモやヤゆユよヨらラりリるルれレろロわワをヲんンがガぎギぐグげゲごゴざザじジzi ずジ ぜゼぞゾだダぢヂづヅでデ どドばバびビぶブべベぼボぱパぴピぷプ ぺペぽポ '
+  var other1  = '輸入簡體字,點下面繁體字按鈕 進行在線轉換 個克裏斯蒂娜考慮公司帶給妳快樂給妳快 樂都是給妳看了那個快樂'
+  var other2  = '10 abcdef,點下面繁體字 I know why you\'re here按鈕進行アいイうウえおかきキく斯蒂娜考慮公 司帶給首付 款你ghijklmnopqrs看快樂都是給妳看了那個快樂 너혼자깨어'
+  var other3  = '니가있는데이런느낌없이바로너혼자깨어있다,안먹어아니면꿈을꾸고  '
 
 
-var matrix=[];
-matrix.push(chinese,english,other,other1,other2,other3);
+  var matrix = []
+  matrix.push(chinese, english, other, other1, other2, other3)
 
-var code=matrix[sum];
-code = code.split("");
-var font_size = 10;
-var columns = c.width/font_size;
-//an array of drops - one per column
-var drops = [];
-for(var x = 0; x < columns; x++)
-	drops[x] = 1; 
-//drawing the characters
-function draw()
-{
-	ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-	ctx.fillRect(0, 0, c.width, c.height);
-	
-	ctx.fillStyle = "#0F0"; //green text
-	ctx.font = font_size + "px arial";
-	//looping over drops
-	for(var i = 0; i < drops.length; i++)
-	{
-		var text = code[Math.floor(Math.random()*code.length)];
-		ctx.fillText(text, i*font_size, drops[i]*font_size);
-		
-		if(drops[i]*font_size > c.height && Math.random() > 0.975)
-			drops[i] = 0;
-		
-	drops[i]++;
-	}
-}
-setInterval(draw, 33);
+  var code      = matrix[ sum ]
+  code          = code.split('')
+  var font_size = 10
+  var columns   = c.width / font_size
+  //an array of drops - one per column
+  var drops     = []
+  for (var x = 0; x < columns; x++)
+    drops[ x ] = 1
+
+  //drawing the characters
+  function draw () {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'
+    ctx.fillRect(0, 0, c.width, c.height)
+
+    ctx.fillStyle = '#0F0' //green text
+    ctx.font      = font_size + 'px arial'
+    //looping over drops
+    for (var i = 0; i < drops.length; i++) {
+      var text = code[ Math.floor(Math.random() * code.length) ]
+      ctx.fillText(text, i * font_size, drops[ i ] * font_size)
+
+      if (drops[ i ] * font_size > c.height && Math.random() > 0.975)
+        drops[ i ] = 0
+
+      drops[ i ]++
+    }
+  }
+
+  setInterval(draw, 33)
 </script>
 </body>
 </html>
